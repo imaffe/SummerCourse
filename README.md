@@ -130,7 +130,7 @@ Mitch主要工作是确定哪些（如果有的话）工厂可能会导致玫瑰
 
 还好，米斯福德大学水文研究所的教授推荐，可以通过分析过去几年的水文数据来进而研究土壤污染情况。保护区的水文传感器分布在保护区的不同地点，并且包含了可能感兴趣的化学物质的测量指标。
 
-![Waterways Final](./HW3/Waterways Final.jpg)
+![Waterways Final](./HW3/WaterwaysFinal.jpg)
 
 数据格式如下：
 
