@@ -47,7 +47,7 @@
   - 题目二：8月4日23:59
   - 题目三：8月6日23:59
 
-- 所有作业以DDL之前的最终版本为准
+- 所有作业以DDL之前的最终版本为准，三份作业为三个报告，小组形式完成，最后需要完成一次展示，展示包括对上面三个作业的结果的展示。
 
 - 作业提交地址：亿方云：[https://](https://v2.fangcloud.com/collection/5a86b4ad8f5ceb0867ba8560e8ece3eb)[v2.fangcloud.com/collection/5a86b4ad8f5ceb0867ba8560e8ece3eb](https://v2.fangcloud.com/collection/5a86b4ad8f5ceb0867ba8560e8ece3eb) 
 
