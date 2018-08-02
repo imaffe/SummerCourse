@@ -1,0 +1,20 @@
+1）可视化设计
+当我们认识到总体的销售状况增长态势客观的情况下，我们更加的希望知道我们各类产品的销售状况，以便更好的去预测未来的需求。由于使用折现图或是其他的图会使图像显得过去杂乱，会看不清楚趋势变化，因此采用突出显示表来反映数据，同时也可以获得确切的增长数据。
+
+2）数据分析
+1. 拉丁美洲大部分种类的商品在2015年度销量出现下滑，而且全部集中在furniture和office  supplies两大版块，这导致了2015年度拉丁美洲总体的销售额和销售量的下降（refer 图-2012~2015年各市场产品销量增长 ，图-2012~2015年总体销售状况分析），而technology板块中的具有高附加值的machine和phone有大幅度增长，使得拉丁美洲在销售额销量下降的情况下维持了总利润的增长（refer 图-2012~2015年总体销售状况分析）
+
+2. 非洲地区除了technology之外，office supplies中的copier，label等办公用产品的销量也在大幅度增加，虽然在13年时有一个下滑，但在14年用成倍的增长弥补回来，因此总体上仍呈现强劲的增长动力。（推测）体现非洲城市化的推进白领工作者的增加导致办公产品的需求增加，进一步可以反映出非洲总体收入水平增加，与非洲的销售增长，消费增长相吻合（refer  图-2012~2015年总体销售状况分析，图-2012~2015年各市场人均消费额）
+
+3. 欧洲、亚太形势相似accessories，binder，label等办公产品的销售量都有大幅的增加，但在其他的产品销售方面好于亚太地区，乃至其他所有市场，几乎都实现了较大幅的的增长，这与欧洲市场人均消费连续增长直逼亚太的趋势符合（refer 图-2012~2015年各市场人均消费额）。但是在北美市场，我们可以发现office supplies中产品的增长并不突出，除了accessories，appliance，copier，label等，除此之外，北美地区machine销量连续三年下滑也是各个市场中独一无二的。
+
+3）建议
+1.  在非洲增加appliance，copier，fastener，label等office supplies的供应，和machine 和phone这两种technology的供应，适当增加table和chair的供应
+
+2. 在亚太地区增加accessories，binder，bookcase，envelop，label，machine，table的供应
+
+3.欧洲都增加供应，但是copier和supplies要增加的更多一点
+
+4.拉美地区增加machine和phone等technology产品的供应，适当减少chair，copier，fastener，paper等的供应给
+
+5. 增加bookcase，accessories，等的供应，减少machine的供应。
