@@ -1,0 +1,2331 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0706.1237                               -->
+<workbook original-version='18.1' source-build='2018.1.3 (20181.18.0706.1237)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SavingAnalyticObjects />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' inline='true' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Boonsong Lekagul waterways readings' name='textscan.1yww4w91m55k9l1cer5m80cidnmo'>
+            <connection class='textscan' directory='D:/浙大/大一下/数据可视化短学期/SummerCourse-master/HW3' filename='Boonsong Lekagul waterways readings.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='chemical units of measure' name='textscan.0mzmrsp0wtvn0d198bdjc171ecpg'>
+            <connection class='textscan' directory='D:/浙大/大一下/数据可视化短学期/SummerCourse-master/HW3' filename='chemical units of measure.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Boonsong Lekagul waterways readings.csv].[measure]' />
+              <expression op='[chemical units of measure.csv].[measure]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1yww4w91m55k9l1cer5m80cidnmo' name='Boonsong Lekagul waterways readings.csv' table='[Boonsong Lekagul waterways readings#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='real' name='value' ordinal='1' />
+              <column datatype='string' name='location' ordinal='2' />
+              <column datatype='date' date-parse-format='dd-MMM-yy' name='sample date' ordinal='3' />
+              <column datatype='string' name='measure' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0mzmrsp0wtvn0d198bdjc171ecpg' name='chemical units of measure.csv' table='[chemical units of measure#csv]' type='table'>
+            <columns character-set='windows-1252' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='measure' ordinal='0' />
+              <column datatype='string' name='unit' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[id]' value='[Boonsong Lekagul waterways readings.csv].[id]' />
+          <map key='[location]' value='[Boonsong Lekagul waterways readings.csv].[location]' />
+          <map key='[measure (chemical units of measure.csv)]' value='[chemical units of measure.csv].[measure]' />
+          <map key='[measure]' value='[Boonsong Lekagul waterways readings.csv].[measure]' />
+          <map key='[sample date]' value='[Boonsong Lekagul waterways readings.csv].[sample date]' />
+          <map key='[unit]' value='[chemical units of measure.csv].[unit]' />
+          <map key='[value]' value='[Boonsong Lekagul waterways readings.csv].[value]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[value]</local-name>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias>value</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sample date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[sample date]</local-name>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias>sample date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[measure]</local-name>
+            <parent-name>[Boonsong Lekagul waterways readings.csv]</parent-name>
+            <remote-alias>measure</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[chemical units of measure.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;ibm-5348_P100-1997&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_CN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[measure (chemical units of measure.csv)]</local-name>
+            <parent-name>[chemical units of measure.csv]</parent-name>
+            <remote-alias>measure</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit]</local-name>
+            <parent-name>[chemical units of measure.csv]</parent-name>
+            <remote-alias>unit</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='按年划分' datatype='string' name='[Calculation_1085649012941402114]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF YEAR([sample date])&gt;=1998 AND YEAR([sample date])&lt;2001&#13;&#10;THEN &quot;1998~2000年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2001 AND YEAR([sample date])&lt;2004&#13;&#10;THEN &quot;2001~2003年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2004 AND YEAR([sample date])&lt;2007&#13;&#10;THEN &quot;2004~2006年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2007 AND YEAR([sample date])&lt;2010&#13;&#10;THEN &quot;2007~2009年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2010 AND YEAR([sample date])&lt;2013&#13;&#10;THEN &quot;2010~2012年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2013 AND YEAR([sample date])&lt;2016&#13;&#10;THEN &quot;2013~2015年&quot;&#13;&#10;ELSE &quot;2016年&quot;&#13;&#10;END' />
+      </column>
+      <column caption='检测时间' datatype='string' name='[Calculation_1085649012950142980]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE YEAR([sample date])&#13;&#10;WHEN 1998 THEN &quot;1998&quot;&#13;&#10;WHEN 1999 THEN &quot;1999&quot;&#13;&#10;WHEN 2000 THEN &quot;2000&quot;&#13;&#10;WHEN 2001 THEN &quot;2001&quot;&#13;&#10;WHEN 2002 THEN &quot;2002&quot;&#13;&#10;WHEN 2003 THEN &quot;2003&quot;&#13;&#10;WHEN 2004 THEN &quot;2004&quot;&#13;&#10;WHEN 2005 THEN &quot;2005&quot;&#13;&#10;WHEN 2006 THEN &quot;2006&quot;&#13;&#10;WHEN 2007 THEN &quot;2007&quot;&#13;&#10;WHEN 2008 THEN &quot;2008&quot;&#13;&#10;WHEN 2009 THEN &quot;2009&quot;&#13;&#10;WHEN 2010 THEN &quot;2010&quot;&#13;&#10;WHEN 2011 THEN &quot;2011&quot;&#13;&#10;WHEN 2012 THEN &quot;2012&quot;&#13;&#10;WHEN 2013 THEN &quot;2013&quot;&#13;&#10;WHEN 2014 THEN &quot;2014&quot;&#13;&#10;WHEN 2015 THEN &quot;2015&quot;&#13;&#10;WHEN 2016 THEN &quot;2016&quot;&#13;&#10;END' />
+      </column>
+      <column caption='可比较数据' datatype='string' name='[Calculation_1085649012961026053]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF MAX(YEAR([sample date]))&gt;2007 AND MIN(YEAR([sample date]))&lt;=2007&#13;&#10;AND DATEDIFF(&quot;year&quot;,MIN([sample date]),MAX([sample date]))&gt;=3&#13;&#10;THEN &quot;可选用数据&quot;&#13;&#10;ELSE &quot;不可选用数据&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[location]' role='dimension' type='nominal' />
+      <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+      <column datatype='string' name='[unit]' role='dimension' type='nominal' />
+      <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+      <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+      <column-instance column='[unit]' derivation='None' name='[none:unit:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[包含(measure,unit)]' name-style='unqualified' user:auto-column='include'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:measure:nk]' />
+          <groupfilter function='level-members' level='[none:unit:nk]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.63125' measure-ordering='alphabetic' measure-percentage='0.36875' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:AdhocCluster:1:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[none:measure:nk]' type='shape'>
+            <map to='asterisk'>
+              <bucket>&quot;AGOC-3A&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Atrazine&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Biochemical Oxygen&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Chromium&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Endrin&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Inorganic nitrogen&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Metolachlor&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;p,p-DDT&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Petroleum hydrocarbons&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Tetrachloromethane&quot;</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>&quot;Water temperature&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;1,2,3-Trichlorobenzene&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Anionic active surfactants&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Benzo(k)fluoranthene&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Chemical Oxygen Demand (Cr)&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Dissolved oxygen&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Heptachlor&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Manganese&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Orthophosphate-phosphorus&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;PCB 138&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Simazine&quot;</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>&quot;Total nitrogen&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Alachlor&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Barium&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Boron&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Chrysene&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Fecal coliforms&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Iron&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Naphthalene&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;PAHs&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Phenanthrene&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Total coliforms&quot;</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>&quot;Zinc&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;alpha-Hexachlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Benzo(a)pyrene&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Calcium&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Cyanides&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Fluoranthene&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Lead&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Nitrates&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;PCB 52&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Pyrene&quot;</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>&quot;Total dissolved salts&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Aluminium&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Benzo(b)fluoranthene&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Carbonates&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Dieldrin&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Fluorene&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Macrozoobenthos&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Nitrites&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;PCB 101&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Selenium&quot;</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>&quot;Total extractable matter&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Acenaphthene&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;AOX&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;beta-Hexaxchlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Chlorides&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Endosulfan (alpha)&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Hexachlorobenzene&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Methoxychlor&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;p,p-DDD&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;PCB 180&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Sulfides&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Total phosphorus&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Ammonium&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Benzo(g,h,i)perylene&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Cesium&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Dissolved organic carbon&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;gamma-Hexachlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Magnesium&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Organic nitrogen&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;PCB 118&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Silica (SiO2)&quot;</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>&quot;Total hardness&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;1,2,4-Trichlorobenzene&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Anthracene&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Berilium&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Chemical Oxygen Demand (Mn)&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Dissolved silicates&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Heptachloroepoxide&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Mercury&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Oxygen saturation&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;PCB 153&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Sodium&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;Total organic carbon&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Acenaphthylene&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Arsenic&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Bicarbonates&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Chlorodinine&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Endosulfan (beta)&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Indeno(1,2,3-c,d)pyrene&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Methylosmoline&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;p,p-DDE&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Pentachlorobenzene&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Sulphates&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;Trifluralin&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Aldrin&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Benzo(a)anthracene&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Cadmium&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Copper&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Fecal streptococci&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Isodrin&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Nickel&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;PCB 28&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Potassium&quot;</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>&quot;Total dissolved phosphorus&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:measure:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Aluminium&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Carbonates&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Fluorene&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Nitrites&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Selenium&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;1,2,3-Trichlorobenzene&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Benzo(k)fluoranthene&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Dissolved oxygen&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Manganese&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PCB 138&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Total nitrogen&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;AGOC-3A&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Biochemical Oxygen&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Endrin&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Metolachlor&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Petroleum hydrocarbons&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Water temperature&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;AOX&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Chlorides&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Hexachlorobenzene&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;p,p-DDD&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sulfides&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ammonium&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Cesium&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;gamma-Hexachlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Organic nitrogen&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Silica (SiO2)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Alachlor&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Boron&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Fecal coliforms&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Naphthalene&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Phenanthrene&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Zinc&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Benzo(b)fluoranthene&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Dieldrin&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Macrozoobenthos&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;PCB 101&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Total extractable matter&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;1,2,4-Trichlorobenzene&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Berilium&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dissolved silicates&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Mercury&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PCB 153&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Total organic carbon&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Benzo(a)anthracene&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Copper&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Isodrin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PCB 28&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Total dissolved phosphorus&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Aldrin&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Cadmium&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fecal streptococci&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Nickel&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Potassium&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Arsenic&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Chlorodinine&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Indeno(1,2,3-c,d)pyrene&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;p,p-DDE&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sulphates&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Atrazine&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Chromium&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Inorganic nitrogen&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;p,p-DDT&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tetrachloromethane&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Benzo(a)pyrene&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Cyanides&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Lead&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;PCB 52&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Total dissolved salts&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Benzo(g,h,i)perylene&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Dissolved organic carbon&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Magnesium&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PCB 118&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Total hardness&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Anionic active surfactants&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chemical Oxygen Demand (Cr)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Heptachlor&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Orthophosphate-phosphorus&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Simazine&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;alpha-Hexachlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Calcium&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Fluoranthene&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Nitrates&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pyrene&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Acenaphthene&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;beta-Hexaxchlorocyclohexane&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Endosulfan (alpha)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Methoxychlor&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PCB 180&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Total phosphorus&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Barium&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Chrysene&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Iron&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PAHs&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Total coliforms&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Anthracene&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Chemical Oxygen Demand (Mn)&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Heptachloroepoxide&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Oxygen saturation&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Sodium&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Acenaphthylene&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bicarbonates&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Endosulfan (beta)&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Methylosmoline&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Pentachlorobenzene&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Trifluralin&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:location:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Boonsri&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chai&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Busarakhan&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Somchair&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kannika&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tansanee&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Achara&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Decha&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kohsoom&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Sakda&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{442f6bc0-fe87-41f0-97f3-25e624aae86c}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields />
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='分年段的污染指数分析'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o50nil1t02bmu196h9rn0uxnj2g'>
+            <column caption='按年划分' datatype='string' name='[Calculation_1085649012941402114]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF YEAR([sample date])&gt;=1998 AND YEAR([sample date])&lt;2001&#13;&#10;THEN &quot;1998~2000年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2001 AND YEAR([sample date])&lt;2004&#13;&#10;THEN &quot;2001~2003年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2004 AND YEAR([sample date])&lt;2007&#13;&#10;THEN &quot;2004~2006年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2007 AND YEAR([sample date])&lt;2010&#13;&#10;THEN &quot;2007~2009年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2010 AND YEAR([sample date])&lt;2013&#13;&#10;THEN &quot;2010~2012年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2013 AND YEAR([sample date])&lt;2016&#13;&#10;THEN &quot;2013~2015年&quot;&#13;&#10;ELSE &quot;2016年&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[value]' derivation='Avg' name='[avg:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[location]' role='dimension' type='nominal' />
+            <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1085649012941402114]' derivation='None' name='[none:Calculation_1085649012941402114:nk]' pivot='key' type='nominal' />
+            <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+            <column-instance column='[unit]' derivation='None' name='[none:unit:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[sample date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[unit]' role='dimension' type='nominal' />
+            <column datatype='real' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]'>
+            <groupfilter function='member' level='[none:measure:nk]' member='&quot;Ammonium&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]'>
+            <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]'>
+            <groupfilter function='reorder-dimensionality' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;  &quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Macrozoobenthos&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;C&quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Water temperature&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Ammonium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Anionic active surfactants&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Bicarbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Biochemical Oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Calcium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Carbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Cr)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Mn)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chlorides&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dissolved oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal streptococci&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Iron&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Magnesium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Manganese&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrites&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Orthophosphate-phosphorus&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Oxygen saturation&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Petroleum hydrocarbons&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Potassium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Silica (SiO2)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sodium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sulphates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total dissolved salts&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total extractable matter&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total hardness&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total nitrogen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total phosphorus&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;µg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Alachlor&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Aldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;alpha-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;AOX&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Arsenic&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Atrazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(a)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(b)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(g,h,i)perylene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(k)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Cadmium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chromium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Copper&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dieldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Endrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;gamma-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Indeno(1,2,3-c,d)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Lead&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Mercury&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nickel&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;p,p-DDT&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 101&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 138&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 153&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 180&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Simazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Zinc&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+              <order>
+                <hierarchy name='[none:measure:nk]' />
+                <hierarchy name='[none:unit:nk]' />
+              </order>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]' value='105' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.36182320117950439' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]</rows>
+        <cols>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[avg:value:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='分年段的污染指数分析（综合）'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o50nil1t02bmu196h9rn0uxnj2g'>
+            <column caption='按年划分' datatype='string' name='[Calculation_1085649012941402114]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF YEAR([sample date])&gt;=1998 AND YEAR([sample date])&lt;2001&#13;&#10;THEN &quot;1998~2000年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2001 AND YEAR([sample date])&lt;2004&#13;&#10;THEN &quot;2001~2003年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2004 AND YEAR([sample date])&lt;2007&#13;&#10;THEN &quot;2004~2006年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2007 AND YEAR([sample date])&lt;2010&#13;&#10;THEN &quot;2007~2009年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2010 AND YEAR([sample date])&lt;2013&#13;&#10;THEN &quot;2010~2012年&quot;&#13;&#10;ELSEIF YEAR([sample date])&gt;=2013 AND YEAR([sample date])&lt;2016&#13;&#10;THEN &quot;2013~2015年&quot;&#13;&#10;ELSE &quot;2016年&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[value]' derivation='Avg' name='[avg:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1085649012941402114]' derivation='None' name='[none:Calculation_1085649012941402114:nk]' pivot='key' type='nominal' />
+            <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+            <column-instance column='[unit]' derivation='None' name='[none:unit:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[sample date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[unit]' role='dimension' type='nominal' />
+            <column datatype='real' name='[value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total coliforms&quot;' />
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total dissolved salts&quot;' />
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total extractable matter&quot;' />
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total hardness&quot;' />
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total nitrogen&quot;' />
+              <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total phosphorus&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]'>
+            <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]'>
+            <groupfilter function='reorder-dimensionality' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;  &quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Macrozoobenthos&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;C&quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Water temperature&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Ammonium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Anionic active surfactants&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Bicarbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Biochemical Oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Calcium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Carbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Cr)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Mn)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chlorides&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dissolved oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal streptococci&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Iron&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Magnesium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Manganese&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrites&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Orthophosphate-phosphorus&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Oxygen saturation&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Petroleum hydrocarbons&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Potassium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Silica (SiO2)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sodium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sulphates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total dissolved salts&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total extractable matter&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total hardness&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total nitrogen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total phosphorus&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;µg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Alachlor&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Aldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;alpha-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;AOX&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Arsenic&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Atrazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(a)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(b)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(g,h,i)perylene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(k)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Cadmium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chromium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Copper&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dieldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Endrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;gamma-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Indeno(1,2,3-c,d)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Lead&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Mercury&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nickel&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;p,p-DDT&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 101&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 138&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 153&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 180&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Simazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Zinc&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+              <order>
+                <hierarchy name='[none:measure:nk]' />
+                <hierarchy name='[none:unit:nk]' />
+              </order>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]' value='105' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.36182320117950439' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[avg:value:qk]</rows>
+        <cols>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='可选用数据'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o50nil1t02bmu196h9rn0uxnj2g'>
+            <column caption='可比较数据' datatype='string' name='[Calculation_1085649012961026053]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF MAX(YEAR([sample date]))&gt;2007 AND MIN(YEAR([sample date]))&lt;=2007&#13;&#10;AND DATEDIFF(&quot;year&quot;,MIN([sample date]),MAX([sample date]))&gt;=3&#13;&#10;THEN &quot;可选用数据&quot;&#13;&#10;ELSE &quot;不可选用数据&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+            <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+            <column-instance column='[unit]' derivation='None' name='[none:unit:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[sample date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[unit]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1085649012961026053]' derivation='User' name='[usr:Calculation_1085649012961026053:ok]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[usr:Calculation_1085649012961026053:ok]' value='272' />
+            <format attr='height' field='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]' value='66' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='size' value='1.2193922996520996' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1o50nil1t02bmu196h9rn0uxnj2g].[usr:Calculation_1085649012961026053:ok] / [federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk])</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='各污染物受监测的时间'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o50nil1t02bmu196h9rn0uxnj2g'>
+            <column caption='检测时间' datatype='string' name='[Calculation_1085649012950142980]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE YEAR([sample date])&#13;&#10;WHEN 1998 THEN &quot;1998&quot;&#13;&#10;WHEN 1999 THEN &quot;1999&quot;&#13;&#10;WHEN 2000 THEN &quot;2000&quot;&#13;&#10;WHEN 2001 THEN &quot;2001&quot;&#13;&#10;WHEN 2002 THEN &quot;2002&quot;&#13;&#10;WHEN 2003 THEN &quot;2003&quot;&#13;&#10;WHEN 2004 THEN &quot;2004&quot;&#13;&#10;WHEN 2005 THEN &quot;2005&quot;&#13;&#10;WHEN 2006 THEN &quot;2006&quot;&#13;&#10;WHEN 2007 THEN &quot;2007&quot;&#13;&#10;WHEN 2008 THEN &quot;2008&quot;&#13;&#10;WHEN 2009 THEN &quot;2009&quot;&#13;&#10;WHEN 2010 THEN &quot;2010&quot;&#13;&#10;WHEN 2011 THEN &quot;2011&quot;&#13;&#10;WHEN 2012 THEN &quot;2012&quot;&#13;&#10;WHEN 2013 THEN &quot;2013&quot;&#13;&#10;WHEN 2014 THEN &quot;2014&quot;&#13;&#10;WHEN 2015 THEN &quot;2015&quot;&#13;&#10;WHEN 2016 THEN &quot;2016&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1085649012950142980]' derivation='None' name='[none:Calculation_1085649012950142980:nk]' pivot='key' type='nominal' />
+            <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[sample date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='shape' value=':filled/diamond' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</rows>
+        <cols>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012950142980:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='逐年的污染指数分析 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Boonsong Lekagul waterways readings.csv+ (多个连接)' name='federated.1o50nil1t02bmu196h9rn0uxnj2g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o50nil1t02bmu196h9rn0uxnj2g'>
+            <column-instance column='[value]' derivation='Avg' name='[avg:value:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[location]' role='dimension' type='nominal' />
+            <column datatype='string' name='[measure]' role='dimension' type='nominal' />
+            <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[measure]' derivation='None' name='[none:measure:nk]' pivot='key' type='nominal' />
+            <column-instance column='[unit]' derivation='None' name='[none:unit:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[sample date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[unit]' role='dimension' type='nominal' />
+            <column datatype='real' name='[value]' role='measure' type='quantitative' />
+            <column-instance column='[sample date]' derivation='Year' name='[yr:sample date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]'>
+            <groupfilter function='member' level='[none:measure:nk]' member='&quot;Carbonates&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]'>
+            <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]'>
+            <groupfilter function='reorder-dimensionality' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;  &quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Macrozoobenthos&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;C&quot;' />
+                  <groupfilter function='member' level='[none:measure:nk]' member='&quot;Water temperature&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;mg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Ammonium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Anionic active surfactants&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Bicarbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Biochemical Oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Calcium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Carbonates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Cr)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chemical Oxygen Demand (Mn)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chlorides&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dissolved oxygen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fecal streptococci&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Iron&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Magnesium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Manganese&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nitrites&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Orthophosphate-phosphorus&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Oxygen saturation&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Petroleum hydrocarbons&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Potassium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Silica (SiO2)&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sodium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Sulphates&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total coliforms&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total dissolved salts&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total extractable matter&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total hardness&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total nitrogen&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Total phosphorus&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:unit:nk]' member='&quot;µg/l&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Alachlor&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Aldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;alpha-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;AOX&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Arsenic&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Atrazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(a)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(b)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(g,h,i)perylene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Benzo(k)fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Cadmium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Chromium&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Copper&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Dieldrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Endrin&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Fluoranthene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;gamma-Hexachlorocyclohexane&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Indeno(1,2,3-c,d)pyrene&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Lead&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Mercury&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Nickel&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;p,p-DDT&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 101&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 138&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 153&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;PCB 180&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Simazine&quot;' />
+                    <groupfilter function='member' level='[none:measure:nk]' member='&quot;Zinc&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+              <order>
+                <hierarchy name='[none:measure:nk]' />
+                <hierarchy name='[none:unit:nk]' />
+              </order>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</column>
+            <column>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[yr:sample date:ok]</rows>
+        <cols>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[avg:value:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='分年段的污染指数分析'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:AdhocCluster:1:ok]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure (chemical units of measure.csv):nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[yr:sample date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='逐年的污染指数分析 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:AdhocCluster:1:ok]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure (chemical units of measure.csv):nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[yr:sample date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='分年段的污染指数分析（综合）'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' type='filter' />
+            <card param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[包含(measure,unit)]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight field='[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]'>
+          <color-one-way>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:AdhocCluster:1:ok]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012941402114:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:location:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure (chemical units of measure.csv):nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[yr:sample date:ok]</field>
+          </color-one-way>
+          <bucket-selection>
+            <bucket>&quot;Total coliforms&quot;</bucket>
+            <bucket>&quot;Total dissolved salts&quot;</bucket>
+            <bucket>&quot;Total extractable matter&quot;</bucket>
+            <bucket>&quot;Total hardness&quot;</bucket>
+            <bucket>&quot;Total nitrogen&quot;</bucket>
+            <bucket>&quot;Total phosphorus&quot;</bucket>
+          </bucket-selection>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='各污染物受监测的时间'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:Calculation_1085649012950142980:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='可选用数据'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:measure:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[none:unit:nk]</field>
+            <field>[federated.1o50nil1t02bmu196h9rn0uxnj2g].[usr:Calculation_1085649012961026053:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='分年段的污染指数分析' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='分年段的污染指数分析（综合）' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='可选用数据' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='各污染物受监测的时间' width='192'>
+      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
+      iG8A4Vvt/wM+XVysR6PYFAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='逐年的污染指数分析 ' width='192'>
+      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
+      DRxuLEwAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
